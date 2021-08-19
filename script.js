@@ -1,7 +1,11 @@
-const image = document.querySelector("img");
+const cells = document.querySelectorAll(".cell");
+
+cells.forEach((cell) => {
+  cell.addEventListener("click", () => {toggleClass(cell)})
+  })
 
 
-
-
-
-image.addEventListener("click", console.log("click"));
+const toggleClass = (cell) => {
+  cell.classList.toggle("cell")
+  cell.classList.toggle("cell--active")
+}
